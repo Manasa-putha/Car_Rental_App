@@ -1,0 +1,32 @@
+Steps for setup
+Download the zip file 
+For Backend--
+Extact files.
+*open Backend file in visual studio 2022.
+*Go to appsettings.json and update the ConnectionStrings.
+*Open package Manager console run build command.
+*run add-migrations Intialdb command and after that run update-database command.
+*Run solution file a browser will open.
+*Now backend setup completed .
+
+*Download the zip file of frontend 
+*Go to fronted folder open in VisualStudioCode
+*Run npm install
+And run this commands 
+** npm i @auth0/angular-jwt
+** npm i ngx-toastr
+and then ng serve.
+it will open localhost:4200 
+is ready for our application LibraryManagmentSystem.
+some users data 
+ 1) Email = admin@gmail.com
+  Password = "admin1234"
+ 2)Email = "sai@gmail.com",
+     Password = "sai1234",
+
+* you can also register to the account through the signup page .And then login then you will login with your new credentials.
+* Implemented signup functionality with full authorization after login it will create jwt token you will see in response.
+* And added expiration of token also it will stay 1 min.
+* Admin can edit, delete the rents of car.
+* once user click on request button then it will go to admin section ,after approving of admin it will accept.
+* implemented day wise calculation based on price

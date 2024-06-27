@@ -1,0 +1,17 @@
+
+<app-navbar></app-navbar>
+<br>
+<div class="dataa" *ngFor="let item of data">
+    <div class="column" *ngIf="!item.avaialblity">
+        <div class="card">
+            <h2>{{item.maker}} </h2>
+            <h1>{{item.model}}</h1>
+            
+            <h3>Cost:  {{item.rentalPrice}}</h3>
+            <h4>Rented</h4>
+
+        </div>
+
+        
+    </div>
+</div>

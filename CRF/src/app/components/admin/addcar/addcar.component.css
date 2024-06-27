@@ -1,0 +1,51 @@
+/* button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+input,
+textarea,
+select,
+button {
+  width: 150px;
+  padding: 30;
+  margin: 30;
+  box-sizing: border-box;
+}
+.container{
+    border-radius: 5px;
+    background-color: aqua;
+    
+} */
+form {
+    position: relative;
+    width: 740px;
+    height: 498px;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    /* background: #fff url(background.jpg);
+   */
+     /* we create our grid */
+    display: grid;
+    grid-gap: 20px;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10em 1em 1em 1em;  */
+  }
+  label {
+    font:
+      0.8em "typewriter",
+      sans-serif;
+  }
+
+.header{
+    text-align: center;
+    font-style: italic;
+    border: blueviolet;
+    
+}
+#input{
+    border: solid 1px rgb(0, 200, 255);
+}

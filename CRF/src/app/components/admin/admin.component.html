@@ -1,0 +1,64 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <h4 style="color: rgb(117, 18, 203);">Admin Dashboard</h4>
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="home"><button class="btn ">Home</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rentedcar"  ><button class="btn ">Rented Cars</button> </a>
+        </li>
+        
+         -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="admin" ><button class="btn ">All Agreements</button> </a>
+        </li> -->
+            <li class="nav-item">
+          <a class="nav-link" href="addcar" ><button class="btn ">Add Car Details</button> </a>
+        </li>
+        <!-- Need to check -->
+        <li class="nav-item-right">
+            <a class="nav-link" href="#"><button class="btn " (click)="logOut()"> Log Out</button></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Main Data -->
+  <div class="container">
+  <div class="main" style="overflow-x: auto;">
+    <table style="width: 100%;">
+      <tr>
+        <th>Agreement ID</th>
+  
+        <th>User Email</th>
+        <th>Required Days</th>
+        <!-- <th>Vehicle Maker</th>
+        <th>Vehicle Model</th> -->
+        <th>Total Cost</th>
+        <th>Edit Agreement</th>
+        <th>Delete Agreement</th>
+        <th>Return Button</th>
+      </tr>
+      <tr *ngFor="let item of data">
+        <td>{{item.id}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.days}}</td>
+        <!-- <td>{{item.maker}}</td>
+        <td>{{item.model}}</td> -->
+        <td>{{item.totalCost}}</td>
+  
+        <td><a [routerLink]="['/edit/'+item.id]"><button style="background-color: #0b8552;"  class="btn">Edit</button></a> </td>
+        <td><button style="background-color: #21e549;" class="btn" (click)="deleteAgreement(item.id)">Delete</button> </td>
+        <td><button style="background-color: #4db088;" *ngIf="item.avaialblity ==true" class="btn"  (click)="acceptReturn(item.id)">Accept Return</button> </td>
+        
+      </tr>
+    </table>
+  </div>
+  </div>

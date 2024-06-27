@@ -1,0 +1,27 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 70px;
+}
+
+
+.card {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+/* Button styling */
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}

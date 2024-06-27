@@ -1,0 +1,35 @@
+<div class="header">
+  <h2>Add a New Car</h2>
+  
+<form [formGroup]="addCarForm" class="container" (ngSubmit)="onSubmit()">
+  
+  <div class="form-group">
+    <label for="Name" ><b>Vehicle Name</b></label>
+    <input id="Name" type="text" class="form-control" formControlName="Model" required  style="border: solid 1px rgb(0, 200, 255);">
+  </div>
+  <div class="form-group">
+    <label for="Maker"><b>Vehicle Maker</b></label>
+    <input id="Maker" type="text" class="form-control" formControlName="Maker" required   style="border: solid 1px rgb(0, 200, 255);">
+  </div>
+  <div class="form-group" >
+    <label for="Description"><b>Description</b></label>
+    <textarea id="Description" class="form-control" formControlName="Description" required  style="border: solid 1px rgb(0, 200, 255);"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="Price"><b>Price</b></label>
+    <input id="Price" type="number" class="form-control" formControlName="RentalPrice" required  style="border: solid 1px rgb(0, 200, 255);">
+  </div>
+  <div class="form-group">
+    <label for="Rating"><b>Rating</b></label>
+    <input id="Rating" type="number" class="form-control" formControlName="Rating" required  style="border: solid 1px rgb(0, 200, 255);">
+  </div>
+  <div class="form-group">
+    <label for="Availability"><b>Availability</b></label>
+    <select id="Availability" class="form-control" formControlName="Avaialblity" required  style="border: solid 1px rgb(0, 200, 255);">
+      <option value="true">Available</option>
+      <option value="false">Not Available</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>

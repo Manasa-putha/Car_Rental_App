@@ -1,0 +1,63 @@
+
+<app-navbar></app-navbar>
+<br>
+<br>
+
+
+<div class="container" style="background-color:rgb(164, 248, 248);" >
+    
+    <div class="searchBar mb-3" style="border: Solid 1px rgb(141, 1, 169);">
+        <input type="text" name="search" class="form-control" [(ngModel)]="searchText" (ngModelChange)="filterData()" placeholder="Search ">
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <pagination-controls 
+                id="car_pagination" 
+                [maxSize]="5" 
+                [directionLinks]="true" 
+                (pageChange)="page = $event">
+            </pagination-controls>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+             
+    <!-- <div class="searchBar mb-3" style="border: Solid 1px rgb(141, 1, 169);">
+        <input type="text" name="search" class="form-control" [(ngModel)]="searchText" placeholder="Search ">
+    </div> -->
+            <div class="card mb-3 pagination" *ngFor="let item of filteredData   | paginate: { id: 'car_pagination', itemsPerPage: 2, currentPage: page}" style="background:rgba(0, 0, 0, 0.2); color: white; cursor: pointer;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img [src]="'../../assets/img/background2.jpg'" class="card-img" style="border: 5px solid black; width: 100%; height: 325px;" alt="Car Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">{{item.maker}}</h2>
+                            <h1 class="card-text">{{item.model}}</h1>
+                            <h3 class="card-text">Cost: {{item.rentalPrice}}</h3>
+                            <a [routerLink]="['/renting/' + item.id]" *ngIf="item.avaialblity">
+                                <button class="btn btn-success">Rent Now ... </button>
+                            </a>
+                            <a *ngIf="!item.avaialblity">
+                                <button class="btn btn-warning">Not Available</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <pagination-controls 
+                id="car_pagination" 
+                [maxSize]="5" 
+                [directionLinks]="true" 
+                (pageChange)="page = $event">
+            </pagination-controls>
+        </div>
+    </div>
+</div>
